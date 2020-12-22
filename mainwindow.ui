@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1230</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+    <item>
+     <widget class="QGroupBox" name="grpTelescopeControl">
+      <property name="title">
+       <string>Telescope control</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btnHdgNeg3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btnHdgNeg2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btnHdgNeg1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <layout class="QVBoxLayout" name="vbxHdg">
+         <item>
+          <widget class="QLabel" name="lblHdg">
+           <property name="text">
+            <string>Heading</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="edtHdg">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="btnHdgPos1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QPushButton" name="btnHdgPos2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="btnHdgPos3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="btnLatNeg3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btnLatNeg2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="btnLatNeg1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <layout class="QVBoxLayout" name="vbxLat">
+         <item>
+          <widget class="QLabel" name="lblLat">
+           <property name="text">
+            <string>Latitude</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="edtLat">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="btnLatPos1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QPushButton" name="btnLatPos2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QPushButton" name="btnLatPos3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btnRANeg3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btnRANeg2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="btnRANeg1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <layout class="QVBoxLayout" name="vbxRA">
+         <item>
+          <widget class="QLabel" name="lblRA">
+           <property name="text">
+            <string>RA</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="edtRA">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="btnRAPos1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QPushButton" name="btnRAPos2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="6">
+        <widget class="QPushButton" name="btnRAPos3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="btnDecNeg3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="btnDecNeg2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="btnDecNeg1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <layout class="QVBoxLayout" name="vbxDec">
+         <item>
+          <widget class="QLabel" name="lblDec">
+           <property name="text">
+            <string>Declination</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="edtDec">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="4">
+        <widget class="QPushButton" name="btnDecPos1">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QPushButton" name="btnDecPos2">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="6">
+        <widget class="QPushButton" name="btnDecPos3">
+         <property name="maximumSize">
+          <size>
+           <width>48</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&gt;&gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="TelescopeWidget" name="wdgTelescope" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1230</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TelescopeWidget</class>
+   <extends>QWidget</extends>
+   <header>telescopewidget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -12,23 +12,51 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         self.step_small = 0.01
-        self.step_normal = 0.1
-        self.step_large = 1.0
+        self.step_normal = 0.5
+        self.step_large = 5.0
 
-        self._telescope_hdg = 0
-        self._telescope_lat = 45
-        self._telescope_ra = 0
-        self._telescope_dec = 90
+        self._telescope_hdg = 0 #335
+        self._telescope_lat = 52 #52
+        self._telescope_ra = 90
+        self._telescope_dec = 90 # 90
 
-        Qt3DCore.QEntity()
         self.update()
 
     def update(self):
-        print(self._telescope_hdg, self._telescope_lat, self._telescope_ra, self._telescope_dec)
+        if self._telescope_hdg >= 360.0:
+            self._telescope_hdg = self._telescope_hdg - 360.0
+        if self._telescope_hdg < 0.0:
+            self._telescope_hdg = self._telescope_hdg + 360.0
+
+        if self._telescope_lat > 90.0:
+            self._telescope_lat = 90.0
+        if self._telescope_lat < 0.0:
+            self._telescope_lat = 0.0
+
+        if self._telescope_ra >= 360.0:
+            self._telescope_ra = self._telescope_ra - 360.0
+        if self._telescope_ra < 0.0:
+            self._telescope_ra = self._telescope_ra + 360.0
+
+        if self._telescope_dec > 100.0:
+            self._telescope_dec = 100.0
+        if self._telescope_dec < -100.0:
+            self._telescope_dec = -100.0
+
         self.edtHdg.setText(f"{self._telescope_hdg:.3f}")
         self.edtLat.setText(f"{self._telescope_lat:.3f}")
         self.edtRA.setText(f"{self._telescope_ra:.3f}")
+        self.lblRA.setText(f"RA {self._telescope_ra/15:.3f}h")
         self.edtDec.setText(f"{self._telescope_dec:.3f}")
+
+        self.wdgTelescope.heading = self._telescope_hdg
+        self.wdgTelescope.latitude = self._telescope_lat
+        self.wdgTelescope.ra = self._telescope_ra
+        self.wdgTelescope.dec = self._telescope_dec
+
+        roll, pitch, yaw = self.wdgTelescope.pointing
+
+        self.widget.setpos(yaw, -roll, pitch)
 
     @property
     def telescope_hdg(self):
@@ -118,7 +146,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     @QtCore.Slot()
     def on_btnRANeg3_clicked(self):
-        self.telescope_ra -= self.step_large
+        self.telescope_ra -= 90
 
     @QtCore.Slot()
     def on_btnRANeg2_clicked(self):
@@ -138,7 +166,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     @QtCore.Slot()
     def on_btnRAPos3_clicked(self):
-        self.telescope_ra += self.step_large
+        self.telescope_ra += 90
 
     @QtCore.Slot()
     def on_btnDecNeg3_clicked(self):
